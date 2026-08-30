@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+  inputs = [
+    ./plasma-config.nix
+  ];
+}
