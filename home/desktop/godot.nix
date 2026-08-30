@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.manager = with.pkgs; [
+  home.packages = with pkgs; [
     godot
   ];
 }

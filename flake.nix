@@ -16,31 +16,27 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, vscode-extensions, ... }:
-    let
-      lib = nixpkgs.lib;
-    in {
+  outputs = inputs@{ self, nixpkgs, home-manager, vscode-extensions, ... }:
+  let
+    lib = nixpkgs.lib;
+  in 
+  {
     nixosConfigurations = {
-      dylans-pc = lib.nixosSystem {
+      # Desktop Host
+      home-pc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
         modules = [
-	  {
-	    nixpkgs.config.allowUnfree = true;
-	    nixpkgs.overlays = [
-	      inputs.vscode-extensions.overlays.default
-	    ];
-	  }
+          ./hosts/home-pc
+        ];
+      };
 
-          ./configuration.nix
- 
-	  home-manager.nixosModules.home-manager
-	  {
-	    home-manager.useGlobalPkgs = true;
-	    home-manager.useUserPackages = true;
-	    home-manager.users.dylans = import ./home.nix;
-	    home-manager.extraSpecialArgs = { inherit inputs; };
-	    home-manager.backupFileExtension = "backup";
-	  }
+      # Laptop Host
+      laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/laptop
         ];
       };
     };

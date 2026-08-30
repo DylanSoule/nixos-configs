@@ -1,6 +1,10 @@
-{ ... }:
+{ inputs, ... }:
 
 {
+  nixpkgs.overlays = [
+    inputs.vscode-extensions.overlays.default
+  ];
+
   imports = [
     ./bluetooth.nix
     ./brave.nix
@@ -9,7 +13,10 @@
     ./location-settings.nix
     ./root-packages.nix
     ./steam.nix
-    ./virtualization.nix
+    ./virtualisation.nix
     ./wine.nix
+    ./bootloader.nix
+    ./nix.nix
+    ./networking.nix
   ];
 }

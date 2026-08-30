@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  harware.bluetooth = {
+  hardware.bluetooth = {
     enable = true;
     powerOnBoot = true;
   };

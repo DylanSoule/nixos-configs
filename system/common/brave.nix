@@ -17,6 +17,5 @@
     BraveP3AEnabled = false;
     BraveStatsPingEnabled = false;
     BraveWebDiscoveryEnabled = false;
-    ];
   };
 }

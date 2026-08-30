@@ -2,7 +2,7 @@
 
 {
   services.clamav = {
-    deamon.enable = true;
+    daemon.enable = true;
     updater.enable = true;
     scanner.enable = false;
   };

@@ -17,7 +17,7 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 
-  system.systemopt.steam = true;
+  systemopt.steam.enable = true;
 
   system.stateVersion = "26.05";
 }
