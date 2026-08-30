@@ -157,28 +157,10 @@ hardware.bluetooth = {
   # $ nix search wget
   environment.systemPackages = with pkgs; [
         vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-	kdePackages.kate
-	neovim
 	git
-	steam
-	brave
-	proton-vpn
-	proton-vpn-cli
-	proton-pass
-	discord
-	godot
 	qemu
 	wineWow64Packages.stable
-	freecad
-	qbittorrent
-	prismlauncher
-	unrar
-	r2modman
-	protontricks
-	vscode.fhs
 	dnsmasq
-	wakeonlan
-	lumafly
   ];
 
 system.stateVersion = "26.05"; # Did you read the comment?
