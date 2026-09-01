@@ -12,6 +12,5 @@
     ./proton.nix
     ./terminal-utils.nix
     ./vscode.nix
-    ./apple-music.nix
   ];
 }
