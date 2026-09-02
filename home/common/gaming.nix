@@ -13,6 +13,7 @@ in
       prismlauncher
       r2modman
       archipelago
+      lumafly
     ];
   };
 }
