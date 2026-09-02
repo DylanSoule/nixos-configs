@@ -12,6 +12,7 @@ in
     home.packages = with pkgs; [
       prismlauncher
       r2modman
+      archipelago
     ];
   };
 }
