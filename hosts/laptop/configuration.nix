@@ -17,6 +17,8 @@
     extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
   };
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   systemopt.steam.enable = true;
 
   system.stateVersion = "26.05";
