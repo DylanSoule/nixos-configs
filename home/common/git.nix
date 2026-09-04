@@ -4,6 +4,6 @@
   programs.git = {
     enable = true;
     userName = "DylanSoule";
-    userEmail = "dylan.soule@icloud.com"
+    userEmail = "dylan.soule@icloud.com";
   };
 }
