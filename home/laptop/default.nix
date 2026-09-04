@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./gns3.nix 
+    ./gns3.nix
+    ./rufus.nix
   ];
 }
