@@ -1,7 +1,7 @@
 { ... }:
 
 {
-  inputs = [
-    ./plasma-config.nix
+  imports = [
+    ./gns3.nix 
   ];
 }

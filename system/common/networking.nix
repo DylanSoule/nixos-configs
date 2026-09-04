@@ -1,8 +1,8 @@
-{ ... }:
+{ lib, ... }:
 
 {
   networking = {
-    hostName = "dylans-pc"; # Define your hostname.
+    hostName = lib.mkDefault "dylans-pc"; # Define your hostname.
     networkmanager.enable = true; # Enable networking
     firewall = {
       enable = true;
