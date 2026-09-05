@@ -1,10 +1,15 @@
 { pkgs, ... }:
 
 {
-  virtualisation.libvirtd.enable = true;
-  programs.virt-manager.enable = true;
-
-  environment.systemPackages = with pkgs; [
-    qemu
-  ];
+  virtualisation.virtualbox.host = {
+    enable = true;
+  };
+  users.extraGroups.vboxusers.members = [ "dylans" ];
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      # xdg-desktop-portal-wlr # Optional: include if using wlroots compositors like Sway/River
+    ];
+  };
 }
