@@ -19,6 +19,14 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  services.tlp = {
+    enable = true;
+    settings = {
+      STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
+    };
+  };
+  services.power-profiles-daemon.enable = false;
+
   systemopt.steam.enable = true;
 
   system.stateVersion = "26.05";
