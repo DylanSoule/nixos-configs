@@ -4,6 +4,7 @@
   
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
@@ -17,7 +18,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, vscode-extensions, ... }:
+  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, vscode-extensions, ... }:
   let
     lib = nixpkgs.lib;
   in 
@@ -35,7 +36,9 @@
       # Laptop Host
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = { 
+	  inherit inputs; 
+	};
         modules = [
           ./hosts/laptop
         ];

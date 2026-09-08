@@ -8,7 +8,13 @@
       home-manager.useGlobalPkgs = true;      
       home-manager.useUserPackages = true;
       home-manager.users.dylans = import ./home.nix;
-      home-manager.extraSpecialArgs = { inherit inputs; };
+      home-manager.extraSpecialArgs = { 
+        inherit inputs;
+	pkgs-unstable = import nixpkgs-unstable {
+          system = "x86_64-linux";
+          config.allowUnfree = true;
+        };
+      };
       home-manager.backupFileExtension = "backup";
     }
   ];
