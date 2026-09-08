@@ -12,4 +12,5 @@
       # xdg-desktop-portal-wlr # Optional: include if using wlroots compositors like Sway/River
     ];
   };
+  virtualisation.vmware.host.enable = true;
 }
