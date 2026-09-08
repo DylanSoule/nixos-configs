@@ -10,7 +10,7 @@
       home-manager.users.dylans = import ./home.nix;
       home-manager.extraSpecialArgs = { 
         inherit inputs;
-	pkgs-unstable = import nixpkgs-unstable {
+	pkgs-unstable = import inputs.nixpkgs-unstable {
           system = "x86_64-linux";
           config.allowUnfree = true;
         };
