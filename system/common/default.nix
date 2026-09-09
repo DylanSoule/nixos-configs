@@ -18,5 +18,6 @@
     ./bootloader.nix
     ./nix.nix
     ./networking.nix
+    ./coding.nix
   ];
 }
