@@ -6,5 +6,6 @@
     ./rufus.nix
     ./kvantum.nix
     ./obsidian.nix
+    ./olympus.nix
   ];
 }
