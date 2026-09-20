@@ -20,11 +20,6 @@ in
         extensions.ms-python.vscode-pylance
       ];
 
-      userSettings = {
-        "workbench.colorTheme" = "Dracula";
-        "files.autoSave" = "onFocusChange";
-        "editor.inlineSuggest.edits.allowCodeShifting" = "never";
-      };
     };
   };
 }
