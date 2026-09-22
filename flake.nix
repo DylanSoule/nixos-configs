@@ -33,6 +33,7 @@
         ];
       };
 
+      
       # Laptop Host
       laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -42,6 +43,17 @@
         modules = [
           ./hosts/laptop
         ];
+
+      # School laptop host
+      laptop = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { 
+	  inherit inputs; 
+	};
+        modules = [
+          ./hosts/school-laptop
+        ];
+
       };
     };
   };
