@@ -43,9 +43,10 @@
         modules = [
           ./hosts/laptop
         ];
+      };
 
       # School laptop host
-      laptop = nixpkgs.lib.nixosSystem {
+      school-laptop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { 
 	  inherit inputs; 
