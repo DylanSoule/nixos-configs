@@ -12,5 +12,6 @@
     ./proton.nix
     ./terminal-utils.nix
     ./vscode.nix
+    ./pdfs.nix
   ];
 }
