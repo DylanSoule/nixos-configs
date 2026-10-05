@@ -14,7 +14,7 @@
     ./root-packages.nix
     ./steam.nix
     ./virtualisation.nix
-    ./wine.nix
+    ./compatibility.nix
     ./bootloader.nix
     ./nix.nix
     ./networking.nix
