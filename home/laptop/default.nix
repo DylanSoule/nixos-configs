@@ -7,5 +7,6 @@
     ./kvantum.nix
     ./obsidian.nix
     ./olympus.nix
+    ./discord.nix
   ];
 }
