@@ -1,5 +1,5 @@
-{ pkgs, inputs, ... }:
+{ pkgs-unstable, ... }:
 
 {
-  boot.kernelPackages = inputs.nixpkgs-unstable.linuxPackages_latest;
+  boot.kernelPackages = pkgs-unstable.linuxPackages_latest;
 }
