@@ -4,6 +4,6 @@
   imports = [
     ./sunshine.nix
     ./tailscale.nix
-    ./kernal.nix
+    ./kernel.nix
   ];
 }
