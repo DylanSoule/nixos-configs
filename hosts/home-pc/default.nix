@@ -1,4 +1,4 @@
-{ inputs, ... }:
+{ inputs, pkgs-unstable, ... }:
 
 {
   imports = [
@@ -8,8 +8,10 @@
       home-manager = {
         useGlobalPkgs = true;      
         useUserPackages = true;
-        extraSpecialArgs = { inherit inputs; };
         backupFileExtension = "backup";
+	extraSpecialArgs = {
+	  inherit inputs pkgs-unstable;
+	};
         
         users.dylans = {
 	  imports = [
