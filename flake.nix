@@ -10,6 +10,11 @@
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    mango = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs-unstable.follows = "nixpkgs-unstable";
+    };
     
     vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -18,7 +23,14 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, vscode-extensions, ... }:
+  outputs = inputs@{ 
+    self, 
+    nixpkgs, 
+    nixpkgs-unstable, 
+    home-manager, 
+    vscode-extensions,
+    mango, 
+    ... }:
   let
     lib = nixpkgs.lib;
   in 
