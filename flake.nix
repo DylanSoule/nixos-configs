@@ -33,13 +33,24 @@
     ... }:
   let
     lib = nixpkgs.lib;
+
+    system = "x86_64-linux";
+    
+    pkgs-unstable = import nixpkgs-unstable {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in 
   {
     nixosConfigurations = {
       # Desktop Host
       home-pc = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        inherit system;
+
+        specialArgs = { 
+	  inherit inputs pkgs-unstable; 
+	};
+
         modules = [
           ./hosts/home-pc
         ];
@@ -48,10 +59,12 @@
       
       # Laptop Host
       laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+
         specialArgs = { 
-	  inherit inputs; 
+	  inherit inputs pkgs-unstable; 
 	};
+
         modules = [
           ./hosts/laptop
         ];
@@ -59,9 +72,10 @@
 
       # School laptop host
       school-laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        inherit system;
+
         specialArgs = { 
-	  inherit inputs; 
+	  inherit inputs pkgs-unstable; 
 	};
         modules = [
           ./hosts/school-laptop

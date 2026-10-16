@@ -5,17 +5,20 @@
     ./configuration.nix
     inputs.home-manager.nixosModules.home-manager
     {
-      home-manager.useGlobalPkgs = true;      
-      home-manager.useUserPackages = true;
-      home-manager.users.dylans = import ./home.nix;
-      home-manager.extraSpecialArgs = { 
-        inherit inputs;
-	pkgs-unstable = import inputs.nixpkgs-unstable {
-          system = "x86_64-linux";
-          config.allowUnfree = true;
+      home-manager = {
+        useGlobalPkgs = true;      
+        useUserPackages = true;
+        backupFileExtension = "backup";
+        extraSpecialArgs = {
+          inherit inputs pkgs-unstable;
+        };
+        
+        users.dylans = {
+          imports = [
+            ./home.nix
+          ];
         };
       };
-      home-manager.backupFileExtension = "backup";
     }
   ];
 }
