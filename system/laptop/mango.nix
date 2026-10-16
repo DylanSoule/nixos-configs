@@ -1,5 +1,9 @@
-{ inputs, pkgs, ... }:
+{ inputs, ... }:
 
 {
-programs.mango.enable = true;
+  imports = [
+    inputs.mango.nixosModules.mango
+  ];
+
+  programs.mango.enable = true;
 }

@@ -13,7 +13,7 @@
 
     mango = {
       url = "github:mangowm/mango";
-      inputs.nixpkgs-unstable.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     
     vscode-extensions = {
