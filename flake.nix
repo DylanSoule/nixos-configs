@@ -15,6 +15,10 @@
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    mangobar - {
+      url = "github:mangowm/mangobar"
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
     
     vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -30,6 +34,7 @@
     home-manager, 
     vscode-extensions,
     mango, 
+    mangobar,
     ... }:
   let
     lib = nixpkgs.lib;

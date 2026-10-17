@@ -1,8 +1,12 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
-    waybar
     rofi
   ];
+
+  services.mangobar = {
+    enable = true;
+    systemdTarget = "mango.target";
+  };
 }
