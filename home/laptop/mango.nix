@@ -1,7 +1,9 @@
-{ inputs, pkgs, ... }:
+{ inputs, pkgs-unstable, ... }:
 
 {
-  home.packages = with pkgs; [
+  imports = [inputs.mangobar.homeManagerModules.default ];
+
+  home.packages = with pkgs-unstable; [
     rofi
   ];
 

@@ -34,7 +34,6 @@
     home-manager, 
     vscode-extensions,
     mango, 
-    mangobar,
     ... }:
   let
     lib = nixpkgs.lib;
