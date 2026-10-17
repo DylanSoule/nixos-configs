@@ -15,7 +15,7 @@
       url = "github:mangowm/mango";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
-    mangobar - {
+    mangobar = {
       url = "github:mangowm/mangobar";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
