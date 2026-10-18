@@ -2,6 +2,11 @@
 
   description = "System Flake";
   
+  nixConfig = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+  };
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
@@ -18,6 +23,9 @@
     mangobar = {
       url = "github:mangowm/mangobar";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/cachix"; 
     };
     
     vscode-extensions = {
