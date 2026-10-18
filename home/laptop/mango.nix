@@ -2,5 +2,8 @@
 
 {
   home.packages = with pkgs-unstable; [
+    nerd-fonts.jetbrains-mono
   ];
+
+  fonts.fontconfig.enable = true;
 }
