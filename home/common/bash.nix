@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  home.sessionsVariables = {
+  home.sessionVariables = {
     XDG_CONFIG_HOME = /home/dylans/.config/mango;
   };
   programs.bash = {
