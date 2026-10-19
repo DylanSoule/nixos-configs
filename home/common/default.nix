@@ -13,5 +13,6 @@
     ./terminal-utils.nix
     ./vscode.nix
     ./pdfs.nix
+    ./mango.nix
   ];
 }

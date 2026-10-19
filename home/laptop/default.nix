@@ -9,6 +9,5 @@
     ./olympus.nix
     ./discord.nix
     ./foot.nix
-    ./mango.nix
   ];
 }
