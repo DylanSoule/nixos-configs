@@ -14,5 +14,6 @@
     ./vscode.nix
     ./pdfs.nix
     ./mango.nix
+    ./gtk-theme.nix
   ];
 }

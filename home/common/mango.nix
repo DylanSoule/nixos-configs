@@ -10,6 +10,6 @@
     yazi
 
     # Themes
-    sweet
+    colloid-gtk-theme
     ];
 }
