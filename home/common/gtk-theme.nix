@@ -5,8 +5,12 @@
     enable = true;
 
     theme = {
-      name = "Colloid-Dark";
-      package = pkgs-unstable.colloid-gtk-theme;
+        name = "Colloid-Dark";
+        package = pkgs-unstable.colloid-gtk-theme;
+      };
+    iconTheme = {
+      name = "Papirus-Dark";
+      package = pkgs-unstable.papirus-icon-theme;
     };
   };
 
@@ -15,5 +19,15 @@
       gtk-theme = "Colloid-Dark";
       color-scheme = "prefer-dark";
     };
+  };
+
+  home.pointerCursor = {
+    enable = true;
+    name = "Bibata-Modern-Classic";
+    package = pkgs-unstable.bibata-cursors;
+    size = 24;
+
+    gtk.enable = true;
+    x11.enable = true;
   };
 }
