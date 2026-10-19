@@ -6,5 +6,6 @@
     ./godot.nix
     ./olympus.nix
     ./download-manager.nix
+    ./mango.nix
   ];
 }

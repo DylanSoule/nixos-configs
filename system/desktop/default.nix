@@ -7,5 +7,6 @@
     ./kernel.nix
     ./firewall.nix
     ./flatpak.nix
+    ./mango.nix
   ];
 }
