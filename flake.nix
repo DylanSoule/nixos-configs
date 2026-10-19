@@ -2,6 +2,11 @@
 
   description = "System Flake";
   
+  nixConfig = {
+    extra-substituters = [ "https://noctalia.cachix.org" ];
+    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+  };
+
   inputs = {
     nixpkgs.url = "nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "nixpkgs/nixos-unstable";
@@ -9,6 +14,18 @@
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    mango = {
+      url = "github:mangowm/mango";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    mangobar = {
+      url = "github:mangowm/mangobar";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia/cachix"; 
     };
     
     vscode-extensions = {
@@ -18,7 +35,14 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, nixpkgs-unstable, home-manager, vscode-extensions, ... }:
+  outputs = inputs@{ 
+    self, 
+    nixpkgs, 
+    nixpkgs-unstable, 
+    home-manager, 
+    vscode-extensions,
+    mango, 
+    ... }:
   let
     lib = nixpkgs.lib;
 

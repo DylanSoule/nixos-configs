@@ -19,5 +19,6 @@
     ./nix.nix
     ./networking.nix
     ./coding.nix
+    ./mango.nix
   ];
 }
