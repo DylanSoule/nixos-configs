@@ -1,12 +1,10 @@
 { pkgs, ... }:
 
 {
-  # Enable KDE Plasma 6 (Wayland by default)
-  services.desktopManager.plasma6.enable = true;
-
   # Display Manager (SDDM) configured natively for Wayland
   services.displayManager.sddm = {
     enable = true;
+    wayland.enable = true;
   };
 
   # System-wide Keyboard Layout (Used by SDDM, Xwayland, and console)
