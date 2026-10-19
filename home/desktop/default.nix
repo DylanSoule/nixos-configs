@@ -7,5 +7,6 @@
     ./olympus.nix
     ./download-manager.nix
     ./mango.nix
+    ./foot.nix
   ];
 }
