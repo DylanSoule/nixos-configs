@@ -8,7 +8,7 @@
   ];
 
   programs.neovin = {
-    enable = true;;
+    enable = true;
     defaultEditor = true;
   };
 }
