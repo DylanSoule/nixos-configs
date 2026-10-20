@@ -33,4 +33,12 @@
   environment.systemPackages = with pkgs-unstable; [
     papirus-icon-theme
   ];
+
+  environment.sessionVariables.XDG_DATA_DIRS =
+    let
+      schemas = pkgs-unstable.gsettings-desktop-schemas;
+    in
+    [
+      "${schemas}/share/gsettings-schemas/${schemas.name}"
+    ];
 }

@@ -2,7 +2,7 @@
 
 {
   home.sessionVariables = {
-    XDG_CONFIG_HOME = /home/dylans/.config/mango;
+    NOCTALIA_CONFIG_HOME = "/home/dylans/.config/mango";
   };
   programs.bash = {
     enable = true;

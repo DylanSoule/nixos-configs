@@ -3,7 +3,11 @@
 {
   programs.git = {
     enable = true;
-    userName = "DylanSoule";
-    userEmail = "dylan.soule@icloud.com";
+    settings = {
+      user = {
+        name = "DylanSoule";
+        email = "dylan.soule@icloud.com";
+      };
+    };
   };
 }

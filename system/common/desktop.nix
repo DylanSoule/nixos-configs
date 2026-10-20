@@ -1,6 +1,9 @@
 { pkgs, ... }:
 
 {
+  # Set neovim to default text editor
+  environment.variables.EDITOR = "nvim";
+
   # Display Manager (SDDM) configured natively for Wayland
   services.displayManager.sddm = {
     enable = true;
@@ -48,4 +51,7 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  # OS keyring via gnome keyring
+  services.gnome.gnome-keyring.enable = true;
 }
