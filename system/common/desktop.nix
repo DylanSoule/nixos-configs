@@ -51,4 +51,7 @@
     nssmdns4 = true;
     openFirewall = true;
   };
+
+  # OS keyring via gnome keyring
+  services.gnome.gnome-keyring.enable = true;
 }
