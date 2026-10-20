@@ -7,7 +7,7 @@
     fastfetch
   ];
 
-  programs.neovin = {
+  programs.neovim = {
     enable = true;
     defaultEditor = true;
   };
