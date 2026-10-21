@@ -1,24 +1,13 @@
-{ inputs, ... }:
+{ inputs, ylib, ... }:
 
 {
   nixpkgs.overlays = [
     inputs.vscode-extensions.overlays.default
   ];
 
-  imports = [
-    ./bluetooth.nix
-    ./brave.nix
-    ./clamav.nix
-    ./desktop.nix
-    ./location-settings.nix
-    ./root-packages.nix
-    ./steam.nix
-    ./virtualisation.nix
-    ./compatibility.nix
-    ./bootloader.nix
-    ./nix.nix
-    ./networking.nix
-    ./coding.nix
-    ./mango.nix
-  ];
+  imports = ylib.umport {
+    paths = [ ./. ];
+    exclude = [ ./default.nix ];
+    recursive = true;
+  };
 }

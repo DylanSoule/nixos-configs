@@ -1,13 +1,9 @@
-{ ... }:
+{ ylib, ... }:
 
 {
-  imports = [
-    ./gns3.nix
-    ./rufus.nix
-    ./kvantum.nix
-    ./obsidian.nix
-    ./olympus.nix
-    ./discord.nix
-    ./foot.nix
-  ];
+  imports = ylib.umport {
+    paths = [ ./. ];
+    exclude = [ ./default.nix ];
+    recursive = true;
+  };
 }

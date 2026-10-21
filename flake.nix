@@ -33,6 +33,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nypkgs = {
+      url = "github:yunfachi/nypkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
   };
 
   outputs = inputs@{ 
@@ -41,7 +46,8 @@
     nixpkgs-unstable, 
     home-manager, 
     vscode-extensions,
-    mango, 
+    mango,
+    nypkgs,
     ... }:
   let
     lib = nixpkgs.lib;
@@ -61,6 +67,7 @@
 
         specialArgs = { 
 	  inherit inputs pkgs-unstable; 
+	  ylib = nypkgs.lib.${system};
 	};
 
         modules = [
@@ -74,7 +81,8 @@
         inherit system;
 
         specialArgs = { 
-	  inherit inputs pkgs-unstable; 
+	  inherit inputs pkgs-unstable;
+	  ylib = nypkgs.lib.${system};
 	};
 
         modules = [
@@ -87,7 +95,8 @@
         inherit system;
 
         specialArgs = { 
-	  inherit inputs pkgs-unstable; 
+	  inherit inputs pkgs-unstable;
+          ylib = nypkgs.lib.${system};
 	};
         modules = [
           ./hosts/school-laptop
