@@ -1,4 +1,4 @@
-{ inputs, pkgs-unstable, ... }:
+{ inputs, pkgs-unstable, ylib, ... }:
 
 {
   imports = [
@@ -10,7 +10,7 @@
         useUserPackages = true;
         backupFileExtension = "backup";
 	extraSpecialArgs = {
-	  inherit inputs pkgs-unstable;
+	  inherit inputs pkgs-unstable ylib;
 	};
         
         users.dylans = {

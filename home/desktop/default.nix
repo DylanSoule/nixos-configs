@@ -3,7 +3,7 @@
 {
   imports = ylib.umport {
     paths = [ ./. ];
-    exclusive = [ ./default.nix ];
+    exclude = [ ./default.nix ];
     recursive = true;
   };
 }
