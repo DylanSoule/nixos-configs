@@ -1,11 +1,9 @@
-{ ... }:
+{ ylib, ... }:
 
 {
-  imports = [
-    ./discord.nix
-    ./godot.nix
-    ./olympus.nix
-    ./download-manager.nix
-    ./foot.nix
-  ];
+  imports = ylib.umport {
+    paths = [ ./. ];
+    exclude = [ ./default.nix ];
+    recursive = true;
+  };
 }

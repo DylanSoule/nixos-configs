@@ -6,6 +6,5 @@
     ./tailscale.nix
     ./kernel.nix
     ./firewall.nix
-    ./flatpak.nix
   ];
 }
