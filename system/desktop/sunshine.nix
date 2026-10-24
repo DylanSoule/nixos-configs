@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs-unstable, ... }:
 
 {
   services.sunshine = {
@@ -6,5 +6,6 @@
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
+    package = pkgs-unstable;
   };
 }
