@@ -29,6 +29,9 @@
     nerd-fonts.jetbrains-mono
   ];
 
+  # Enable brightness
+  hardware.i2c.enable = true;
+
   # Icon theme and desktop utilities
   environment.systemPackages = with pkgs-unstable; [
     papirus-icon-theme
