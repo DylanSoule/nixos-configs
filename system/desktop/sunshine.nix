@@ -6,6 +6,6 @@
     autoStart = true;
     capSysAdmin = true;
     openFirewall = true;
-    package = pkgs-unstable;
+    package = pkgs-unstable.sunshine;
   };
 }
