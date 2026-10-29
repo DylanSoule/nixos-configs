@@ -5,5 +5,6 @@
     gns3-gui
     gns3-server
     tigervnc
+    wireshark
   ];
 }
