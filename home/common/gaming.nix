@@ -14,6 +14,7 @@ in
       r2modman
       archipelago
       lumafly
+      lutris
     ];
   };
 }
