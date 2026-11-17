@@ -5,6 +5,7 @@
     tree
     unrar
     fastfetch
+    p7zip
   ];
 
   programs.neovim = {
