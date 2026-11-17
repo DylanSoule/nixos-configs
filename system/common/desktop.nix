@@ -54,4 +54,9 @@
 
   # OS keyring via gnome keyring
   services.gnome.gnome-keyring.enable = true;
+
+  # ddcutil for brighness
+  environment.systemPackages = with pkgs; [
+    ddcutil
+  ];
 }

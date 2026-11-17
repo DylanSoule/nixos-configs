@@ -29,6 +29,10 @@
     nerd-fonts.jetbrains-mono
   ];
 
+  # Enable brightness
+  hardware.i2c.enable = true;
+  users.users.dylans.extraGroups = [ "i2c" ];
+
   # Icon theme and desktop utilities
   environment.systemPackages = with pkgs-unstable; [
     papirus-icon-theme

@@ -8,7 +8,7 @@
   ];
 
   # Host-specific system identity & hardware settings
-  networking.hostName = "dylans-laptop";
+  networking.hostName = "idea-laptop-05";
 
   # Primary User Definition
   users.users.dylans = {

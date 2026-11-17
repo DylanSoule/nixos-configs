@@ -1,8 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, pkgs-unstable, ... }:
 
 {
-  home.packages = with pkgs; [
-    uget
+  home.packages = [
+    pkgs.uget
+
+    pkgs-unstable.qbittorrent
   ];
 }
 
