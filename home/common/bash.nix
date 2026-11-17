@@ -2,7 +2,7 @@
 
 {
   home.sessionVariables = {
-    NOCTALIA_CONFIG_HOME = "/home/dylans/.config/mango";
+    NOCTALIA_CONFIG_HOME = "/home/dylans/.config";
   };
   programs.bash = {
     enable = true;
