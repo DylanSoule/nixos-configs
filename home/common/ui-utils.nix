@@ -4,6 +4,5 @@
   home.packages = with pkgs-unstable; [
     seahorse
     thunderbird
-    sidra
   ];
 }
