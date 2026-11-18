@@ -21,6 +21,16 @@
 
   services.power-profiles-daemon.enable = false;
 
+  nix.settings = {
+    extra-substituters = [
+      "https://nix.wimpys.world"
+    ];
+
+    extra-trusted-public-keys = [
+      "nix.wimpys.world-1:fphFHD2f+iEG5G81lFRgU84MB6N9ScHGFvB6D64tLmo="
+    ];
+  };
+
   systemopt.steam.enable = true;
 
   system.stateVersion = "26.05";

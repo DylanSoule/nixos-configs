@@ -3,8 +3,12 @@
   description = "System Flake";
   
   nixConfig = {
-    extra-substituters = [ "https://noctalia.cachix.org" ];
-    extra-trusted-public-keys = [ "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4=" ];
+    extra-substituters = [ 
+      "https://noctalia.cachix.org"
+    ];
+    extra-trusted-public-keys = [ 
+      "noctalia.cachix.org-1:pCOR47nnMEo5thcxNDtzWpOxNFQsBRglJzxWPp3dkU4="i
+    ];
   };
 
   inputs = {
@@ -27,6 +31,8 @@
     noctalia = {
       url = "github:noctalia-dev/noctalia/cachix"; 
     };
+
+    sidra.url = "github:wimpysworld/sidra/latest";
     
     vscode-extensions = {
       url = "github:nix-community/nix-vscode-extensions";
@@ -48,6 +54,7 @@
     vscode-extensions,
     mango,
     nypkgs,
+    sidra,
     ... }:
   let
     lib = nixpkgs.lib;
