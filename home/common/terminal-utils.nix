@@ -6,6 +6,7 @@
     unrar
     fastfetch
     p7zip
+    wl-clipboard
   ];
 
   programs.neovim = {
