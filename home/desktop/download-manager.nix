@@ -1,7 +1,7 @@
 { pkgs, pkgs-unstable, ... }:
 
 {
-  home.packages = [i
+  home.packages = [
     pkgs-unstable.qbittorrent
   ];
 }
